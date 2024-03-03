@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Portal</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="./style.css">
+<body>
+    <div class="mainHead">
+        <div class="rightHead">
+            <!-- <img src="./sscLogo1.png" alt="sscLogo" class="sscImage"/> -->
+            <img src="https://ssc.gov.in/candidate-portal/assets/images/sscLogo.png" alt="" class="sscImage">
+            <div class="leftheadbody">
+                <p>Government of India <br>Staff Selection Commission</p>
+            </div>
+        </div>
+        <div class="leftHead">
+            <div class="leftHeadsearch">
+                <div class="searchBar">
+                    <input type="search" placeholder="search" id="search"/>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button class="loginbutton">Login or register</button>
+            </div>
+            <!-- <img src="./Satyamev-Jayate.png" alt="Bharat" style="height: 50px; width: 50px;"/> -->
+            <div ><img src="https://ssc.gov.in/candidate-portal/assets/images/Satyamev-Jayate.png" alt="" class="bharat"></div>
+        </div>
+    </div>
+    <div class="mainBody">
+        <div class="rightBody">
+            <div class=""><img src="https://ssc.gov.in/candidate-portal/assets/images/user-profile-add.svg" alt=""></div>
+            <div>
+                <div class="rightdiv">
+                    <h3>Persional Details</h3>
+                    <p class="pera">Candidates name, Identification, Contact</p>
+                </div>
+                <div class="rightdiv">
+                    <h3>Password Creation</h3>
+                    <p class="pera">Create New Password</p>
+                </div>
+                <div class="rightdiv">
+                    <h3>Additional Details</h3>
+                    <p class="pera">Candidate's Nationality, Address, Education</p>
+                </div>
+                <div class="rightdiv">
+                    <h3>Declaration</h3>
+                    <p class="pera">Candidate's Details confirmation</p>
+                </div>
+            </div>
+        </div>
+        <div class="leftBody">
+            <div class="persional-deatail">
+                <p><i class="fa-solid fa-arrow-left"></i>&nbsp;Home Page &nbsp;>&nbsp; One Time Registration</p>
+            </div>
+            <div class="form-page01">
+                <form  method="POST" action="./form">
+                    <div>
+                        <p>One Time Registration</p>
+                        <h3 id="h3">Persional Details</h3>
+                    </div>
+                    <hr>
+                    <div class="adhaarDiv">
+                        <p class="subHeading">1. Do you have a Adhaar Card ? *</p>
+                        <input type="radio" name="adhaar" id="adhaar" class="radiobtn">
+                        <label for="adhaar">Yes</label>
+                        <input type="radio" name="adhaar" id="adhaar" class="radiobtn">
+                        <label for="adhaar">No</label><br>
+                        
+                        <div class="adhaarheading">
+                            <label for="adhaarNo" class="subHeading">a. Adhaar Card Number</label><br>
+                            <input type="text" name="adhaarNo" id="adhaarNo" placeholder="e.g. 525265658585" class="inputBox"><br>
+                            <p class="smallFormNote">Adhaar Number should be same as mention in your ahdar card</p>
+                        </div> 
+                        <div class="adhaarheading">   
+                            <label for="adhaarNo" class="subHeading">b.Verify Adhaar Card Number</label><br>
+                            <input type="text" name="vadhaarNo" id="adhaarNo" placeholder="e.g. 525265658585" class="inputBox">
+                            <p class="smallFormNote">Adhaar Number should be same as mention in your ahdar card</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="subHeading">2.Type Of identification card</p>
+                        <select name="IdentificationCard" id="IdentificationCard" class="inputBox4">
+                            <option value="Driving Licence">Driving Licence</option>
+                            <option value="Pen Card">Pen card</option>
+                            <option value="Employer Id">Employer Id</option>
+                            <option value="Passport">Passport</option>
+                            <option value="School/Collage">School/Collage Id Card</option>
+                            <option value="Voter Id Card">Voter Id card</option>
+                        </select>
+                        <p class="smallFormNote">Type of Id and Id Number to be provided if you don't want to give Adhaar Card Number</p>
+                        <div class="adhaarheading">
+                            <label for="IdNo">a. Identification Card Number</label><br>
+                            <input type="text" name="IdNo" id="IdNo" class="inputBox">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="CandidateName" class="subHeading">3. Candidate Name(As per Matriculation Certificate) * </label><br>
+                        <input type="text" name="CandidateName" id="CandidateName" class="inputBox2">
+                        <p class="smallFormNote">1. candidate Name should be same as mention in Matricualtion Certificate</p>
+                        <p class="smallFormNote">2. Please enter name without any salutation(i.g. Shri/Shm/Mr/Mrs/Ms/Dr/Prof)</p>
+                        
+                        <div class="adhaarheading">
+                            <label for="CandidateName">a. Verify Candidate Name(As per Matriculation Certificate) *</label><br>
+                            <input type="text" name="vCandidateName" id="CandidateName" class="inputBox">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="subHeading">4. Have you ever changed Name*</p>
+                        <input type="radio" name="changedName" id="changedName" class="radiobtn">
+                        <label for="changedName">Yes</label>
+                        <input type="radio" name="changedName" id="changedName" class="radiobtn">
+                        <label for="changedName">No</label><br>
+                        
+                        <div class="adhaarheading">
+                            <label for="newName">a. New Name/Changed Name</label><br>
+                            <input type="text" name="newName" id="newName" class="inputBox"><br>
+                        </div>
+                        <div class="adhaarheading">
+                            <label for="againNewName">b.Verify New Name/Changed Name</label><br>
+                            <input type="text" name="againNewName" id="againNewName" class="inputBox">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="subHeading">5. Gender *</p>
+                        <select name="gender" id="geder" placeholder="Select" class="inputBox4"> 
+                            <option>Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Transgender">Transgender</option>
+                        </select>
+                        <div class="adhaarheading">
+                            <p class="subHeading">a. Verify Gender *</p>
+                            <select name="vgender" id="geder" class="inputBox4">
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Transgender">Transgender</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="dob" class="subHeading">6. Date Of Birth(DD-MM-YY)</label><br>
+                        <input type="date" name="dob" id="dob" class="inputBox2">
+                        <p class="smallFormNote">Date Of Birth should be same as mention in your Matriculation certificate</p>
+                        <div class="adhaarheading">
+                            <label for="verifydob" class="subHeading">a. Verify Date Of Birth(DD-MM-YY)</label><br>
+                            <input type="date" name="verifydob" id="verifydob" class="inputBox">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="fatherName">7. Father's Name *</label>
+                        <input type="text" name="fatherName" id="fatherName" class="inputBox2">
+                        <p class="smallFormNote">1. Father's name should be same as mention in your Matriculation certificate</p>
+                        <p class="smallFormNote">2. Please enter name without any salutation(i.g. Shri/Shm/Mr/Mrs/Ms/Dr/Prof)</p>
+                        <div class="adhaarheading">
+                            <label for="verifyfatherName">a. Verify Father's Name</label>
+                            <input type="text" name="verifyfatherName" id="verifyfatherName" class="inputBox">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="motherName">8. Mother's name *</label>
+                        <input type="text" name="motherName" id="motherName" class="inputBox2">
+                        <p class="smallFormNote">1. Mother's name should be same as mention in your Matriculation certificate</p>
+                        <p class="smallFormNote">2. Please enter name without any salutation(i.g. Shri/Shm/Mr/Mrs/Ms/Dr/Prof)</p>
+                        <div class="adhaarheading">
+                            <label for="verifyMotherName">a. Verify Mother's name</label>
+                            <input type="text" name="verifyMotherName" id="verifyMotherName" class="inputBox">
+                        </div>
+                    </div>
+                    <div>
+                        <p>9. Matricualtion(10th Class) Education Board *</p>
+                        <select name="tenth" id="10th" placeholder="Select" class="inputBox4">
+                            <option>Select</option>
+                            <option value="CBSE">Central Board Of Secondary Education</option>
+                            <option value="rajesthan">Board Of Secondary Education Rajesthan</option>
+                            <option value="Odisha">Board Of secondary Education Odisha</option>
+                        </select>
+                        <div class="adhaarheading">
+                            <p>a.  Verify Matricualtion(10th Class) Education Board *</p>
+                            <select name="againTenth" id="again10th" placeholder="Select" class="inputBox4">
+                                <option>Select</option>
+                                <option value="CBSE">Central Board Of Secondary Education</option>
+                                <option value="rajesthan">Board Of Secondary Education Rajesthan</option>
+                                <option value="Odisha">Board Of secondary Education Odisha</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="rollNo">10. Roll Number *</label>
+                        <input type="text" name="rollNo" id="rollNo" class="inputBox2">
+                        <p class="smallFormNote">1. Roll Number should be same as mention in your Matriculation certificate</p>
+                        <p class="smallFormNote">2. Only / and - are allowed, Please enter Roll Number any other special character(s).</p>
+                        <p class="smallFormNote">3. If roll Code gievn in your Matriculation Certificate then enter Roll Code - Roll No</p>
+                        <div class="adhaarheading">
+                            <label for="VerifyRollNo">a. Verify Roll Number *</label><br>
+                            <input type="text" name="VerifyRollNo" id="VerifyRollNo" class="inputBox">
+                        </div>
+                    </div>
+                    <div>
+                        <p>11. Year Of Passing *</p>
+                        <select name="passingYear" id="passingYear" class="inputBox4">
+                            <option value="">select</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                        <div class="adhaarheading">
+                            <p>a. Verify Year Of Passing *</p>
+                        <select name="VpassingYear" id="VpassingYear" class="inputBox4">
+                            <option value="">select</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div>
+                        <p>12. Highest Level of Education Qualification</p>
+                        <select name="EduQualification" id="EduQualification" class="inputBox4">
+                            <option value="PG">Post Graduate</option>
+                            <option value="G">Graduate</option>
+                            <option value="12th">12th</option>
+                            <option value="10th">10th</option>
+                        </select>
+                        <div class="adhaarheading">
+                            <p>a. Verify Highest Level of Education Qualification</p>
+                            <select name="VeduQualification" id="VeduQualification" class="inputBox4">
+                                <option value="PG">Post Graduate</option>
+                                <option value="G">Graduate</option>
+                                <option value="12th">12th</option>
+                                <option value="10th">10th</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="mobileNo">13. Candidates Mobile Number *</label>
+                        <input type="text" name="mobileNo" id="mobileNo" class="inputBox2">
+                        <p class="smallFormNote">OTP for verification of mobile number  will be send to this Mobile Number</p>
+                    </div>
+                    <div>
+                        <label for="email">14. Candidates Email *</label>
+                        <input type="text" name="email" id="email" class="inputBox2">
+                        <p class="smallFormNote">OTP for verification of email will be send to this email</p>
+                    </div>
+                    <button class="savebtn">Save & Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
